@@ -6,7 +6,7 @@ using namespace std;
 #define FOR(i, a, b) for (int i = (a); i <= (b); ++i)
 #define FORD(i, a, b) for (int i = (a); i >= (b); --i)
 // BOILERPLATE_END
-#define TEST_CASE "0"
+#define TEST_CASE "tests/0"
 
 const int MAX_N = 20'000;
 int mem[MAX_N];
