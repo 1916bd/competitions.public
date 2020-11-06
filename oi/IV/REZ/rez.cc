@@ -15,6 +15,7 @@ using namespace std;
 #define REP(i, n) for (int i = 0; i < (n); ++i)
 #define FOR(i, a, b) for (int i = (a); i <= (b); ++i)
 #define FORD(i, a, b) for (int i = (a); i >= (b); --i)
+#define NAME(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 // BOILERPLATE_END
 #define TEST_CASE "tests/0"
 
