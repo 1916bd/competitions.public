@@ -1,7 +1,21 @@
-#include <bitset>
-#include <iostream>
-#include <queue>
+// BOILERPLATE_BEGIN
+/**
+ *
+ * Mokra robota
+
+ * Status: AC
+ * Competition: Olimpiada Informatyczna III
+ * Link: https://szkopul.edu.pl/problemset/problem/vObl4Sutc8ViCjq0_eNse2uy/site/?key=statement
+ * Tags: #bfs
+ *
+ */
+#include <bits/stdc++.h>
 using namespace std;
+
+#define REP(i, n) for (int i = 0; i < (n); ++i)
+#define FOR(i, a, b) for (int i = (a); i <= (b); ++i)
+// BOILERPLATE_END
+#define TEST_CASE "tests/0"
 
 int n;
 
@@ -9,7 +23,7 @@ int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
 
 int encode(int* a) {
   int res = 0;
-  for (int i = 0; i < n; ++i) {
+  REP(i, n) {
     res <<= 6;
     res += a[i];
   }
@@ -24,16 +38,24 @@ void decode(int t, int* a) {
 }
 
 int main() {
+  // BOILERPLATE_BEGIN
   ios::sync_with_stdio(false);
+  cin.tie(0);
+  cout.tie(0);
+#ifdef LOCAL
+  freopen(TEST_CASE ".in", "r", stdin);
+  freopen(TEST_CASE ".out", "w", stdout);
+#endif
+  // BOILERPLATE_END
   int g = 0, cap[4], out[4], aux[4], infeasible = 0, end;
   bitset<1 << 24> mem;
   queue<pair<int, int>> q;
   cin >> n;
-  for (int i = 0; i < n; ++i) {
+  REP(i, n) {
     cin >> cap[i];
     g = gcd(g, cap[i]);
   }
-  for (int i = 0; i < n; ++i) {
+  REP(i, n) {
     cin >> out[i];
     infeasible += out[i] % g;
   }
@@ -59,9 +81,9 @@ int main() {
     }
     decode(el.first, aux);
     // fill j from i
-    for (int i = 0; i < n; ++i) {
+    REP(i, n) {
       if (aux[i] == 0) continue;
-      for (int j = 0; j < n; ++j) {
+      REP(j, n) {
         if (i == j || aux[j] == cap[j]) continue;
         int diff = min(aux[i], cap[j] - aux[j]);
         aux[i] -= diff;
@@ -72,7 +94,7 @@ int main() {
       }
     }
     // dump i
-    for (int i = 0; i < n; ++i) {
+    REP(i, n) {
       if (!aux[i]) continue;
       int t = aux[i];
       aux[i] = 0;
