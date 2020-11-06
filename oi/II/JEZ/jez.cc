@@ -1,4 +1,14 @@
 // BOILERPLATE_BEGIN
+/**
+ *
+ * Jedynki i zera 2
+ * 
+ * Status: AC
+ * Competition: Olimpiada Informatyczna II
+ * Link: https://szkopul.edu.pl/problemset/problem/zMktwkCSdzEzUp3IvXmLzMzi/site/?key=statement
+ * Tags: #bfs
+ *
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
