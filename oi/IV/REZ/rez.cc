@@ -5,7 +5,7 @@
  * 
  * Status: AC
  * Competition: Olimpiada Informatyczna IV
- * Link: https://szkopul.edu.pl/problemset/problem/ex8U04OQav3BWcaH7wCtK-_b/site/?key=statement
+ * Link: https://szkopul.edu.pl/problemset/problem/ex8U04OQav3BWcaH7wCtK-_b/site/?key=statemeĻnt
  * Tags: #dp #binary-search
  *
  */
