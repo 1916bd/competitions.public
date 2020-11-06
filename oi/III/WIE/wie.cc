@@ -1,4 +1,14 @@
 // BOILERPLATE_BEGIN
+/**
+ *
+ * Wieże
+ *
+ * Status: AC
+ * Competition: Olimpiada Informatyczna III
+ * Link: https://szkopul.edu.pl/problemset/problem/mgF5mwigvVecNEvDsjJ4xv0i/site/?key=statement
+ * Tags: #greedy #1D #sorting
+ *
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,7 +19,7 @@ using namespace std;
 
 const int MAX_N = 3000;
 
-bool Process1d(vector<int>& res, vector<pair<pair<int, int>, int>>& v) {
+bool Process1d(vector<int> &res, vector<pair<pair<int, int>, int>> &v) {
   int n = v.size();
   res.resize(n);
   sort(v.begin(), v.end());
