@@ -1,23 +1,5 @@
-// BOILERPLATE_BEGIN
-/**
- *
- * Rezerwacja sal wykładowych
- * 
- * Status: AC
- * Competition: Olimpiada Informatyczna IV
- * Link: https://szkopul.edu.pl/problemset/problem/ex8U04OQav3BWcaH7wCtK-_b/site/?key=statemeĻnt
- * Tags: #dp #binary-search
- *
- */
 #include <bits/stdc++.h>
 using namespace std;
-
-#define REP(i, n) for (int i = 0; i < (n); ++i)
-#define FOR(i, a, b) for (int i = (a); i <= (b); ++i)
-#define FORD(i, a, b) for (int i = (a); i >= (b); --i)
-#define NAME(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
-// BOILERPLATE_END
-#define TEST_CASE "tests/0"
 
 const int MAX_N = 10'001;
 
@@ -26,15 +8,8 @@ pair<int, int> rez[MAX_N];
 int mem[MAX_N];
 
 int main() {
-  // BOILERPLATE_BEGIN
-  ios::sync_with_stdio(false);
+  ios_base::sync_with_stdio(false);
   cin.tie(0);
-  cout.tie(0);
-#ifdef LOCAL
-  freopen(TEST_CASE ".in", "r", stdin);
-  freopen(TEST_CASE ".out", "w", stdout);
-#endif
-  // BOILERPLATE_END
   int n;
   cin >> n;
   for (int i = 0; i < n; ++i) cin >> rez[i].second >> rez[i].first;
